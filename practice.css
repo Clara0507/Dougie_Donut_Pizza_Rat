@@ -1,0 +1,30 @@
+h2{
+    color: green;
+    font: bold;
+}
+
+#popoButton{
+    background-color: lightblue;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#bronx{
+    background-color: lightpink;
+}
+
+#brook{
+    background-color: lightpink;
+}
+
+#queen{
+    background-color: lightpink;
+}
+
+#manhat{
+    background-color: lightpink;
+}
+
+#statis{
+    background-color: lightpink;
+}
