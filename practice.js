@@ -61,12 +61,12 @@ const policeResponseBtn=document.getElementById("response")
 const popoResolves=document.getElementById("resolution")
 
 
-function unhide(){
-   const policeResponseDiv=document.getElementById("response");
-   if(policeResponseDiv[0].offsetWidth>0 && policeResponseDiv[0].offsetHeight>0){
-       policeResponseDiv[0].style.visibility="visible";
-   }
-}
+// function unhide(){
+//    const policeResponseDiv=document.getElementById("response");
+//    if(policeResponseDiv[0].offsetWidth>0 && policeResponseDiv[0].offsetHeight>0){
+//        policeResponseDiv[0].style.visibility="visible";
+//    }
+// }
 
 
 // const clickEvent=()=>{

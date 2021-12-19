@@ -1,0 +1,18 @@
+h2{
+    color: green;
+    font: bold;
+}
+
+#popoButton{
+    background-color: lightblue;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.btns{
+    background-color: lightpink;
+}
+
+#entireApp{
+   background-color:  lightsalmon;
+}

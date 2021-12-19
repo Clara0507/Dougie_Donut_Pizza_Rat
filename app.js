@@ -1,5 +1,3 @@
-        
-
 const num=document.getElementById("userInput")
 
 const bronxButton=document.getElementById("bronx")
@@ -9,21 +7,15 @@ const manButton=document.getElementById("manhat")
 const statIsButton=document.getElementById("statis")
 
 const complaintsDiv=document.getElementById("complaints")
-const policeResponseDiv=document.getElementById("response")
-
-
-function unhide(){
-   const policeResponseDiv=document.getElementById("response");
-   if(policeResponseDiv[0].offsetWidth>0 && policeResponseDiv[0].offsetHeight>0){
-       policeResponseDiv[0].style.visibility="visible";
-   }
-}
+const policeResponseBtn=document.getElementById("response")
+const popoResolves=document.getElementById("resolution")
 
 
 
 bronxButton.addEventListener("click", () =>{ 
         complaintsDiv.innerHTML=''
-        policeResponseDiv.innerHTML=''
+        policeResponseBtn.innerHTML=''
+        popoResolves.innerHTML=''
 
         let userNum=Number(num.value) 
         
@@ -35,12 +27,12 @@ bronxButton.addEventListener("click", () =>{
             .then( (info) =>{
                 for(let i=0; i<info.length; i++){
                 
-                    let bronxComplaints=info[i].descriptor
-                    let popoResponse=info[i].resolution_description
+                let bronxComplaints=info[i].descriptor
+                let whatPopoDid=info[i].resolution_description
                     
-                    complaintsDiv.innerHTML+=`<p>${bronxComplaints}</p>`
-                    policeResponseDiv.innerHTML+=`<button id="popoButton" onclick=${popoResponse}> NYPD RESOLUTION </button>`
-                
+                complaintsDiv.innerHTML+=`<p>${bronxComplaints}</p>`
+                policeResponseBtn.innerHTML+=`<button id="popoButton" onclick=${whatPopoDid}> NYPD RESOLUTION </button>`
+                popoResolves.innerHTML+=`<p>${whatPopoDid}`
                 }
              })
         .catch((error)=>{
@@ -50,7 +42,8 @@ bronxButton.addEventListener("click", () =>{
               
 brookButton.addEventListener("click", () =>{ 
         complaintsDiv.innerHTML=''
-        policeResponseDiv.innerHTML=''
+        policeResponseBtn.innerHTML=''
+        popoResolves.innerHTML=''
         
         userNum=Number(num.value) 
         
@@ -63,11 +56,12 @@ brookButton.addEventListener("click", () =>{
                 for(let i=0; i<info.length; i++){
             
                 let brookComplaints=info[i].descriptor
-                let popoResponse=info[i].resolution_description 
+                let whatPopoDid=info[i].resolution_description 
                 
-                complaintsDiv.innerHTML+=`<p>${brookComplaints}</p>button>NYPD RESOLUTION</button>`
-               
-               }
+                complaintsDiv.innerHTML+=`<p>${brookComplaints}</p>`
+                policeResponseBtn.innerHTML+=`<button id="popoButton" onclick=${whatPopoDid}> NYPD RESOLUTION </button>`
+                popoResolves.innerHTML+=`<p>${whatPopoDid}`
+                }
             })
         .catch((error)=>{
             console.log(error)
@@ -76,7 +70,8 @@ brookButton.addEventListener("click", () =>{
 
 queensButton.addEventListener("click", () =>{ 
         complaintsDiv.innerHTML=''
-        policeResponseDiv.innerHTML=''
+        policeResponseBtn.innerHTML=''
+        popoResolves.innerHTML=''
         
         userNum=Number(num.value) 
         
@@ -89,11 +84,12 @@ queensButton.addEventListener("click", () =>{
                 for(let i=0; i<info.length; i++){
             
                 let queensComplaints=info[i].descriptor
-                let popoResponse=info[i].resolution_description 
+                let whatPopoDid=info[i].resolution_description 
                 
-                complaintsDiv.innerHTML+=`<p>${queensComplaints}</p><button>NYPD RESOLUTION</button>`
-              
-               }
+                complaintsDiv.innerHTML+=`<p>${queensComplaints}</p>`
+                policeResponseBtn.innerHTML+=`<button id="popoButton" onclick=${whatPopoDid}> NYPD RESOLUTION </button>`
+                popoResolves.innerHTML+=`<p>${whatPopoDid}`
+                }
             })
         .catch((error)=>{
             console.log(error)
@@ -102,7 +98,8 @@ queensButton.addEventListener("click", () =>{
 
 manButton.addEventListener("click", () =>{ 
         complaintsDiv.innerHTML=''
-        policeResponseDiv.innerHTML=''
+        policeResponseBtn.innerHTML=''
+        popoResolves.innerHTML=''
         
         userNum=Number(num.value) 
         
@@ -115,11 +112,12 @@ manButton.addEventListener("click", () =>{
                 for(let i=0; i<info.length; i++){
             
                 let manComplaints=info[i].descriptor
-                let popoResponse=info[i].resolution_description 
+                let whatPopoDid=info[i].resolution_description 
                 
-                complaintsDiv.innerHTML+=`<p>${manComplaints}</p><button>NYPD RESOLUTION</button>`
-               
-               }
+                complaintsDiv.innerHTML+=`<p>${manComplaints}</p>`
+                policeResponseBtn.innerHTML+=`<button id="popoButton" onclick=${whatPopoDid}> NYPD RESOLUTION </button>`
+                popoResolves.innerHTML+=`<p>${whatPopoDid}`
+                }
             })
         .catch((error)=>{
             console.log(error)
@@ -128,7 +126,8 @@ manButton.addEventListener("click", () =>{
 
 statIsButton.addEventListener("click", () =>{ 
         complaintsDiv.innerHTML=''
-        policeResponseDiv.innerHTML=''
+        policeResponseBtn.innerHTML=''
+        popoResolves.innerHTML=''
         
         userNum=Number(num.value) 
     
@@ -141,11 +140,12 @@ statIsButton.addEventListener("click", () =>{
                 for(let i=0; i<info.length; i++){
             
                 let statComplaints=info[i].descriptor
-                let popoResponse=info[i].resolution_description 
+                let whatPopoDid=info[i].resolution_description 
                 
-                complaintsDiv.innerHTML+=`<p>${statComplaints}</p><button>NYPD RESOLUTION</button>`
-                
-               }
+                complaintsDiv.innerHTML+=`<p>${statComplaints}</p>`
+                policeResponseBtn.innerHTML+=`<button id="popoButton" onclick=${whatPopoDid}> NYPD RESOLUTION </button>`
+                popoResolves.innerHTML+=`<p>${whatPopoDid}`
+                }
             })
         .catch((error)=>{
             console.log(error)
